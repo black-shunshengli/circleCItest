@@ -10,10 +10,8 @@ jobs:
 
     steps:
     - run:
-        name: Add Git
         command: |
-          apk update
-          apk add git openssh
+          apt-get update
 
     - checkout
 
