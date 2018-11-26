@@ -9,6 +9,11 @@ jobs:
       environment:
 
     steps:
+    - run:
+        name: Add Git
+        command: |
+          apk update
+          apk add git openssh
 
     - checkout
 
