@@ -15,12 +15,9 @@ jobs:
           apk add git openssh
 
     - run:
-        command: |
-          which make
-
-    - run:
         name: unit test
         command: |
+           set -e
            make test
 
     - run:
