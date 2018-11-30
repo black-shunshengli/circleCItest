@@ -9,9 +9,8 @@ jobs:
 
     steps:
     - run:
-        command: |
-          echo Running test....
-          make test
+        name: Unit Test
+        command: sudo ./mvnw clean package --quiet
 
     - run:
         name: Collect All Test Reports
