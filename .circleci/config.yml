@@ -17,16 +17,4 @@ jobs:
         name: Store All Test Reports
         path: target/report
 
-workflows:
-  version: 2
-  nightly:
-    triggers:
-    - schedule:
-        cron: "0-59 0-23 * * *"
-        filters:
-          branches:
-            only:
-            - master
 
-    jobs:
-    - test
