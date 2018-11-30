@@ -6,7 +6,12 @@ jobs:
     docker:
     - image: anapsix/alpine-java:8_jdk_unlimited
 
+    - run:
+        name: Collect All Test Reports
+        command: |
+          mkdir -p target/report
+
     steps:
     - store_test_results:
         name: Store All Test Reports
-        path: target/surefire-reports
+        path: target/report
