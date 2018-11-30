@@ -15,9 +15,13 @@ jobs:
           apk add git openssh
 
     - run:
+        command: |
+          which make
+
+    - run:
         name: unit test
         command: |
-          pipenv run make test
+           make test
 
     - run:
         name: Collect All Test Reports
