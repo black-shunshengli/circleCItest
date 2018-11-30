@@ -15,6 +15,10 @@ jobs:
           apk add git openssh
 
     - run:
+        name: Unit Test
+        command: ./mvnw clean package --quiet
+
+    - run:
         name: Collect All Test Reports
         command: |
           mkdir -p target/report
