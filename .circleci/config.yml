@@ -9,8 +9,10 @@ jobs:
 
     steps:
     - run:
-        name: Unit Test
-        command: sudo ./mvnw clean package --quiet
+        name: Add Git
+        command: |
+          apk update
+          apk add git openssh
 
     - run:
         name: Collect All Test Reports
