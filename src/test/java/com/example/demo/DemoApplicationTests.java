@@ -15,13 +15,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 @FixMethodOrder(MethodSorters.JVM)
 public class DemoApplicationTests {
-	private String mockStr = "mock privateMethod";
-	private String notMockStr = "privateMethod";
-
-
 	@Test
 	public void testNoReturnValue3() {
 		System.out.println("end.............");
-
 	}
 }

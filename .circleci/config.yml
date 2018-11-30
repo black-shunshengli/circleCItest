@@ -1,12 +1,10 @@
 version: 2
 jobs:
   build:
-
     working_directory: ~/circleCItest
 
     docker:
-    - image: anapsix/alpine-java:8_jdk_unlimited
-      environment:
+    - image: circleci/openjdk:8-jdk-browsers
 
     steps:
     - run:
@@ -14,9 +12,6 @@ jobs:
           apt-get update
 
     - checkout
-
-    - restore_cache:
-        key: circleCItest-{{ checksum "pom.xml" }}
 
     - run: apt-get install maven
 
@@ -26,4 +21,4 @@ jobs:
 
     - store_test_results:
         name: Store All Test Reports
-        path: target/report
+        path: target/surefire-reports
