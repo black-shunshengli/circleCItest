@@ -6,12 +6,13 @@ jobs:
     docker:
     - image: anapsix/alpine-java:8_jdk_unlimited
 
+
+    steps:
     - run:
         name: Collect All Test Reports
         command: |
           mkdir -p target/report
 
-    steps:
     - store_test_results:
         name: Store All Test Reports
         path: target/report
