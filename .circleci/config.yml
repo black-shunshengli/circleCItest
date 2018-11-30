@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  test:
+  build:
     working_directory: ~/circleCItest
 
     docker:
@@ -8,6 +8,11 @@ jobs:
 
 
     steps:
+    - checkout
+    - run:
+        name: Unit Test
+        command: ./mvnw clean package --quiet
+
     - run:
         name: Collect All Test Reports
         command: |
