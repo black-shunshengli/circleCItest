@@ -8,10 +8,10 @@ jobs:
 
 
     steps:
-    - checkout
     - run:
-        name: Unit Test
-        command: ./mvnw clean package --quiet
+        command: |
+          echo Running test....
+          make test
 
     - run:
         name: Collect All Test Reports
