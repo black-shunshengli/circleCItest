@@ -24,6 +24,6 @@ public class DemoApplicationTests {
 
 	@Test
 	public void testNoReturnValue2() {
-		//Assert.assertTrue(1 == 2);
+		Assert.assertTrue(1 == 2);
 	}
 }
