@@ -18,7 +18,7 @@ jobs:
     - run:
         name: unit test
         command: |
-          mvn test
+          mvn -e -X test
 
     - run:
         name: mkdir report
