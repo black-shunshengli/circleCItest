@@ -30,3 +30,7 @@ jobs:
         path: target/report
 
 
+    - run:
+        name: show result
+        command: |
+          ls /home/circleci/bitdict-test/target/report
