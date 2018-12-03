@@ -16,19 +16,18 @@ jobs:
           mvn -D skipTests clean install
 
     - run:
-        name: unit test
-        command: |
-          mvn test
-
-    - run:
         name: mkdir report
         command: |
           mkdir -p target/report
 
+    - run:
+        name: unit test
+        command: |
+          mvn test
+
     - store_test_results:
         name: Store All Test Reports
         path: target/report
-
 
     - run:
         name: show result
