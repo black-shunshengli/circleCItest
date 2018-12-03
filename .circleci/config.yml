@@ -41,6 +41,6 @@ workflows:
   build-deploy:
     jobs:
     - build
-    - show_resultstage:
+    - show_result:
         requires:
         - build
