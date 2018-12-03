@@ -31,6 +31,9 @@ jobs:
 
 
   show_result:
+    working_directory: ~/circleCItest
+
+    steps:
     - run:
         name: show result
         command: |
