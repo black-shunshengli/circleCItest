@@ -29,7 +29,18 @@ jobs:
         name: Store All Test Reports
         path: target/report
 
+
+    show_result:
     - run:
         name: show result
         command: |
           ls /home/circleci/bitdict-test/target/report
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+    - build
+    - show_resultstage:
+        requires:
+        - build
